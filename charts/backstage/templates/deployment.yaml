@@ -92,7 +92,7 @@ spec:
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
           env:
             {{- if .Values.backend.env }}
-{{ toYaml .Values.backend.env | indent  }}
+{{ toYaml .Values.backend.env | indent 8 }}
             {{- end }}
           ports:
             - name: backend
