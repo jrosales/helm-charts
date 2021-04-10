@@ -90,6 +90,11 @@ spec:
             {{- toYaml .Values.backend.securityContext | nindent 12 }}
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
+	  env:
+	    {{- range .Values.backend.env }}
+	    - name: {{ .name }}
+	      value: {{ .value }}
+	    {{- end }}
           ports:
             - name: backend
               containerPort: 80
