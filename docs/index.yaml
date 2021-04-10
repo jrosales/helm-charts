@@ -3,11 +3,11 @@ entries:
   backstage:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-10T10:44:41.025656-05:00"
+    created: "2021-04-10T11:11:02.055362-05:00"
     description: A Helm chart for Backstage
-    digest: 254b108804d24e4f27520bc8ed5e59fd9be5867324620298a47d93115958223b
+    digest: 019ecc3ba421dd06552792a37312c10df502940d7754d232a158277f7c378382
     name: backstage
     urls:
     - https://jrosales.github.io/helm-charts/backstage-0.1.1-alpha.12.tgz
     version: 0.1.1-alpha.12
-generated: "2021-04-10T10:44:41.025245-05:00"
+generated: "2021-04-10T11:11:02.054936-05:00"
