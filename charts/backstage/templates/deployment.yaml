@@ -37,11 +37,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
           resources:
             {{- toYaml .Values.app.resources | nindent 12 }}
       {{- with .Values.app.nodeSelector }}
@@ -91,7 +91,7 @@ spec:
           image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
           {{- if .Values.backend.env }}
-              {{ toYaml .Values.backend.env | nindent 8 }}
+              {{- toYaml .Values.backend.env | nindent 8 }}
           {{- end }}
           ports:
             - name: backend
@@ -100,11 +100,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: backend
+              port: 80
           readinessProbe:
             httpGet:
               path: /
-              port: backend
+              port: 80
           resources:
             {{- toYaml .Values.backend.resources | nindent 12 }}
       {{- with .Values.backend.nodeSelector }}
